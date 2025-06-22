@@ -1,0 +1,10 @@
+theme: jekyll-theme-minimal
+title: GrimHex - Album Musical
+description: Site officiel de l'album GrimHex par TRASHGANG
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
