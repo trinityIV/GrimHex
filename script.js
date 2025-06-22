@@ -188,43 +188,43 @@ const tracks = [
     {
         title: "Dans ton Drake",
         artist: "TRASHGANG",
-        src: "./musique/Dans ton Drake.mp3",
+        src: "musique/Dans ton Drake.mp3",
         duration: "3:45"
     },
     {
         title: "Dirty Trsh (Remastered)",
         artist: "TRASHGANG", 
-        src: "./musique/Dirty Trsh (Remastered).mp3",
+        src: "musique/Dirty Trsh (Remastered).mp3",
         duration: "4:12"
     },
     {
         title: "le Carrack Organisé (Trinity - Requiem and the corps)",
         artist: "TRASHGANG",
-        src: "./musique/le Carrack Organisé (Trinity - Requiem and the corps).mp3",
+        src: "musique/le Carrack Organisé (Trinity - Requiem and the corps).mp3",
         duration: "5:23"
     },
     {
         title: "le Carrack Organisé",
         artist: "TRASHGANG",
-        src: "./musique/le Carrack Organisé.mp3",
+        src: "musique/le Carrack Organisé.mp3",
         duration: "4:01"
     },
     {
         title: "TRASHGANG – LES CHASSEURS DE TANA",
         artist: "TRASHGANG",
-        src: "./musique/TRASHGANG – LES CHASSEURS DE TANA.mp3",
+        src: "musique/TRASHGANG – LES CHASSEURS DE TANA.mp3",
         duration: "3:55"
     },
     {
         title: "trshgang – Bienvenue dans la piraterie",
         artist: "TRASHGANG",
-        src: "./musique/trshgang – Bienvenue dans la piraterie.mp3",
+        src: "musique/trshgang – Bienvenue dans la piraterie.mp3",
         duration: "4:18"
     },
     {
         title: "trshgang –Viens pull up sur mon Javelin",
         artist: "TRASHGANG",
-        src: "./musique/trshgang –Viens pull up sur mon Javelin.mp3",
+        src: "musique/trshgang –Viens pull up sur mon Javelin.mp3",
         duration: "3:37"
     }
 ];
