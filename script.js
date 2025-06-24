@@ -220,12 +220,54 @@ const tracks = [
         artist: "TRASHGANG",
         src: "musique/trshgang – Bienvenue dans la piraterie.mp3",
         duration: "4:18"
-    },
-    {
+    },    {
         title: "trshgang –Viens pull up sur mon Javelin",
         artist: "TRASHGANG",
         src: "musique/trshgang –Viens pull up sur mon Javelin.mp3",
         duration: "3:37"
+    },
+    // === BONUS TRACKS - GRIMHEX NIGHT ===
+    {
+        title: "GrimHex Nights",
+        artist: "TRASHGANG",
+        src: "musique/GrimHex Night/GrimHex Nights.mp3",
+        duration: "4:25"
+    },
+    {
+        title: "GrimHex Nights (Lollypop Version)",
+        artist: "TRASHGANG",
+        src: "musique/GrimHex Night/GrimHex Nights lollypop.mp3",
+        duration: "4:32"
+    },
+    {
+        title: "GrimHex Nights (Men Trshgang Version)",
+        artist: "TRASHGANG",
+        src: "musique/GrimHex Night/GrimHex Nights men Trshgang version.mp3",
+        duration: "4:18"
+    },
+    {
+        title: "Même pas pressurisé",
+        artist: "TRASHGANG",
+        src: "musique/GrimHex Night/Même pas pressurisé.mp3",
+        duration: "3:47"
+    },
+    {
+        title: "Paffy Circus",
+        artist: "TRASHGANG",
+        src: "musique/GrimHex Night/trshgang - Paffy Circus.mp3",
+        duration: "3:55"
+    },
+    {
+        title: "Vers le paff (Lol Version)",
+        artist: "TRASHGANG",
+        src: "musique/GrimHex Night/trshgang - Vers le paff lol Version.mp3",
+        duration: "4:01"
+    },
+    {
+        title: "Vers le PAFF (Trash Remix)",
+        artist: "TRASHGANG",
+        src: "musique/GrimHex Night/Vers le PAFF (Trash Remix).mp3",
+        duration: "4:14"
     }
 ];
 
@@ -394,10 +436,22 @@ function setupEventListeners() {
             currentTimeEl.textContent = formatTime(audio.currentTime);
         }
     });
-    
-    audio.addEventListener('ended', () => {
+      audio.addEventListener('ended', () => {
+        // Réinitialiser l'état de lecture
+        isPlaying = false;
+        playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+        
         // Passer à la piste suivante automatiquement
-        nextTrack();
+        const newIndex = currentTrackIndex < tracks.length - 1 ? currentTrackIndex + 1 : 0;
+        loadTrack(newIndex);
+        
+        // Jouer automatiquement la piste suivante
+        audio.play().then(() => {
+            isPlaying = true;
+            playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        }).catch(error => {
+            console.error('Erreur lors de la lecture automatique:', error);
+        });
     });
     
     audio.addEventListener('error', (e) => {
